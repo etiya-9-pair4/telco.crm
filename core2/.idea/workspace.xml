@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b5970806-8418-4429-9b1c-aaf925125fa1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/macidko/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/io/github/macidko/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../configserver/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../configserver/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customerservice/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../customerservice/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customerservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../customerservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customerservice/src/main/java/com/etiya/customerservice/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customerservice/src/main/java/com/etiya/customerservice/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customerservice/src/main/java/com/etiya/customerservice/core/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customerservice/src/main/java/com/etiya/customerservice/core/entity/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customerservice/src/main/java/com/etiya/customerservice/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customerservice/src/main/java/com/etiya/customerservice/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customerservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../customerservice/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../podman-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../podman-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productservice/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../productservice/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../productservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/core/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/core/entity/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/Campaign.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/Campaign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/CampaignProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/CampaignProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/Catalog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/CatalogProductOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/CatalogProductOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/Characteristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/Characteristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/CustomerProductOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/CustomerProductOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/ProductCharacteristicValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/ProductCharacteristicValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/ProductOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productservice/src/main/java/com/etiya/productservice/entity/ProductOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../productservice/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2nA0keFgE8vXYoqL8LHOtIpvbOg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.core2 [clean,deploy].executor": "Run",
+    "Maven.core2 [clean].executor": "Run",
+    "Maven.core2 [deploy].executor": "Run",
+    "Maven.core2 [javadoc:javadoc].executor": "Run",
+    "Maven.core2 [verify].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/eren.macit/IdeaProjects/telco-crm/telco.crm/core2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn javadoc:javadoc" />
+      <command value="mvn clean deploy" />
+    </option>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-corretto-21.0.2-4caba194b151-51586f01" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b5970806-8418-4429-9b1c-aaf925125fa1" name="Changes" comment="" />
+      <created>1728400718126</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728400718126</updated>
+      <workItem from="1728400719219" duration="1299000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

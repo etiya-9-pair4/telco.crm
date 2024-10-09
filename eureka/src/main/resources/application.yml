@@ -1,10 +1,10 @@
 spring:
-  application:
-    name: eureka
   config:
     import: "optional:configserver:"
+  application:
+    name: eureka
   cloud:
     config:
       uri: http://localhost:8001
-      profile: local
+      profile: dev
       label: main

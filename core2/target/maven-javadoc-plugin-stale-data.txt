@@ -1,0 +1,40 @@
+@options
+@packages
+@argfile
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/eren.macit/IdeaProjects/telco-crm/telco.crm/core2/src/main/java;C:/Users/eren.macit/IdeaProjects/telco-crm/telco.crm/core2/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/eren.macit/IdeaProjects/telco-crm/telco.crm/core2/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'core2 1.0 API'
+-use
+-version
+-windowtitle
+'core2 1.0 API'
+io.github.macidko
+'C:/Users/eren.macit/IdeaProjects/telco-crm/telco.crm/core2/src/main/java/io/github/macidko/App.java'
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\src\main\java = 1728400402937
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\target\generated-sources\annotations = 1728400961219
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\target\apidocs\allclasses-index.html = 1728400966147
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\target\apidocs\allpackages-index.html = 1728400966149
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\target\apidocs\element-list = 1728400966088
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\target\apidocs\help-doc.html = 1728400966181
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\target\apidocs\index-all.html = 1728400966167
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\target\apidocs\index.html = 1728400966175
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\target\apidocs\member-search-index.js = 1728400966158
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\target\apidocs\module-search-index.js = 1728400966151
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\target\apidocs\overview-tree.html = 1728400966132
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\target\apidocs\package-search-index.js = 1728400966154
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\target\apidocs\search.html = 1728400966172
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\target\apidocs\tag-search-index.js = 1728400966160
+C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core2\target\apidocs\type-search-index.js = 1728400966156
