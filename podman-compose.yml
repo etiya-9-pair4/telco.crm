@@ -1,11 +1,11 @@
 services:
-  mysql:
-    container_name: telcocrm-mysql
+  customerservice_db:
+    container_name: telcocrm-customerservice_db
     image: docker.io/library/mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: test
       MYSQL_DATABASE: customer_db
-      MYSQL_USER: my_user
+      MYSQL_USER: admin
       MYSQL_PASSWORD: test
     ports:
       - "3306:3306"
@@ -19,12 +19,12 @@ services:
       timeout: 10s
       retries: 5
 
-  postgresql:
-    container_name: telcocrm-postgresql
+  productservice_db:
+    container_name: telcocrm-productservice_db
     image: docker.io/library/postgres:latest
     environment:
-      POSTGRES_DB: postgres
-      POSTGRES_USER: my_user
+      POSTGRES_DB: product_db
+      POSTGRES_USER: admin
       POSTGRES_PASSWORD: test
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -63,8 +63,8 @@ services:
       - SPRING_CLOUD_CONFIG_PROFILE=prod
       - SPRING_CLOUD_CONFIG_LABEL=main
     depends_on:
-      - mysql
-      - postgresql
+      - customerservice_db
+      - productservice_db
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:8001/actuator/health" ]
       interval: 5s
