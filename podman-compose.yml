@@ -1,6 +1,6 @@
 services:
   mysql:
-    container_name: mysql
+    container_name: telcocrm-mysql
     image: docker.io/library/mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: test
@@ -20,7 +20,7 @@ services:
       retries: 5
 
   postgresql:
-    container_name: postgresql
+    container_name: telcocrm-postgresql
     image: docker.io/library/postgres:latest
     environment:
       POSTGRES_DB: postgres
@@ -33,22 +33,22 @@ services:
     networks:
       - common
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
       interval: 30s
       timeout: 10s
       retries: 5
-#  mongo:
-#    image: docker.io/library/mongo
-#    container_name: mongodb
-#    ports:
-#      - 27017:27017
-#    environment:
-#      - MONGO_INITDB_ROOT_USERNAME=root
-#      - MONGO_INITDB_ROOT_PASSWORD=root
-#    volumes:
-#      - mongodb_data:/data/db
-#    networks:
-#      - common
+  #  mongo:
+  #    image: docker.io/library/mongo
+  #    container_name: mongodb
+  #    ports:
+  #      - 27017:27017
+  #    environment:
+  #      - MONGO_INITDB_ROOT_USERNAME=root
+  #      - MONGO_INITDB_ROOT_PASSWORD=root
+  #    volumes:
+  #      - mongodb_data:/data/db podman build -t telcocrm-productservice .
+  #    networks:
+  #      - common
 
   configserver:
     container_name: configserver
@@ -60,13 +60,13 @@ services:
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8888/eureka/
       - SPRING_CLOUD_CONFIG_URI=http://configserver:8001
-      - SPRING_CLOUD_CONFIG_PROFILE=dev
+      - SPRING_CLOUD_CONFIG_PROFILE=prod
       - SPRING_CLOUD_CONFIG_LABEL=main
     depends_on:
       - mysql
       - postgresql
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8001/actuator/health"]
+      test: [ "CMD", "curl", "-f", "http://localhost:8001/actuator/health" ]
       interval: 5s
       timeout: 10s
       retries: 10
@@ -79,7 +79,7 @@ services:
     environment:
       - EUREKA_INSTANCE_HOSTNAME=eureka
       - SPRING_CLOUD_CONFIG_URI=http://configserver:8001
-      - SPRING_CLOUD_CONFIG_PROFILE=dev
+      - SPRING_CLOUD_CONFIG_PROFILE=prod
       - SPRING_CLOUD_CONFIG_LABEL=main
     networks:
       - common
@@ -104,7 +104,7 @@ services:
       - EUREKA_INSTANCE_HOSTNAME=gateway
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8888/eureka/
       - SPRING_CLOUD_CONFIG_URI=http://configserver:8001
-      - SPRING_CLOUD_CONFIG_PROFILE=dev
+      - SPRING_CLOUD_CONFIG_PROFILE=prod
       - SPRING_CLOUD_CONFIG_LABEL=main
     depends_on:
       eureka:
@@ -119,7 +119,7 @@ services:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8888/eureka/
       - EUREKA_INSTANCE_HOSTNAME=productservice
       - SPRING_CLOUD_CONFIG_URI=http://configserver:8001
-      - SPRING_CLOUD_CONFIG_PROFILE=dev
+      - SPRING_CLOUD_CONFIG_PROFILE=prod
       - SPRING_CLOUD_CONFIG_LABEL=main
     networks:
       - common
@@ -136,7 +136,7 @@ services:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8888/eureka/
       - EUREKA_INSTANCE_HOSTNAME=customerservice
       - SPRING_CLOUD_CONFIG_URI=http://configserver:8001
-      - SPRING_CLOUD_CONFIG_PROFILE=dev
+      - SPRING_CLOUD_CONFIG_PROFILE=prod
       - SPRING_CLOUD_CONFIG_LABEL=main
     networks:
       - common
