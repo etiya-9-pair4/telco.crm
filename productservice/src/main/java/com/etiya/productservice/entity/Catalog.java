@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -13,8 +14,9 @@ import java.util.List;
 @Entity
 @Table(name = "catalog")
 public class Catalog extends BaseEntity {
+
     @Column(name = "parent_id")
-    private Integer parentId;
+    private UUID parentId;
 
     @OneToMany(mappedBy = "catalog")
     private List<Product> products;

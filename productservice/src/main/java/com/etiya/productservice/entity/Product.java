@@ -13,10 +13,11 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "Products")
+//TODO: characteristic_value relations
 public class Product extends BaseEntity {
-    @Column(name="price")
+    @Column(name = "price")
     private BigDecimal price;
-    @Column(name="stock")
+    @Column(name = "stock")
     private Integer stock;
 
     @ManyToOne
@@ -25,6 +26,6 @@ public class Product extends BaseEntity {
 
     @OneToMany(mappedBy = "product")
     private List<CampaignProduct> campaignProducts;
-    @OneToMany(mappedBy = "product")
-    private List<ProductCharacteristicValue> productCharacteristicValues;
+//    @OneToMany(mappedBy = "product")
+//    private List<ProductCharacteristicValue> productCharacteristicValues;
 }

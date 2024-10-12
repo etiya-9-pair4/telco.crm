@@ -1,10 +1,12 @@
 package com.etiya.productservice.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.UuidGenerator;
 
-import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -12,15 +14,13 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="CustomersProductOffers")
-public class CustomerProductOffer {
+@Table(name="Charecteristic_value")
+public class CharacteristicValue {
     @Id
     @GeneratedValue
     @UuidGenerator
-    @Column(name="id")
+    @Column(name = "id")
     private UUID id;
-//    private List<Customer> customers;
-    @ManyToOne
-    @JoinColumn(name = "productoffer_id")
-    private ProductOffer productOffer;
+    private UUID characteristicId;
+    private String value;
 }

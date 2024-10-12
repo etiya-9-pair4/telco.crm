@@ -2,8 +2,10 @@ package com.etiya.productservice.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.UuidGenerator;
 
 import java.util.List;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -13,9 +15,10 @@ import java.util.List;
 @Table(name="ProductCharecteristicValue")
 public class ProductCharacteristicValue {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
+    @UuidGenerator
     @Column(name="id")
-    private Integer id;
+    private UUID id;
     @Column(name="value")
     private String value;
 
