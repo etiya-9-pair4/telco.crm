@@ -37,18 +37,19 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
-  #  mongo:
-  #    image: docker.io/library/mongo
-  #    container_name: mongodb
-  #    ports:
-  #      - 27017:27017
-  #    environment:
-  #      - MONGO_INITDB_ROOT_USERNAME=root
-  #      - MONGO_INITDB_ROOT_PASSWORD=root
-  #    volumes:
-  #      - mongodb_data:/data/db podman build -t telcocrm-productservice .
-  #    networks:
-  #      - common
+
+  orderservice_db:
+    image: docker.io/library/mongo
+    container_name: telcocrm-orderservice_db
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - common
 
   configserver:
     container_name: configserver
@@ -147,6 +148,7 @@ services:
 volumes:
   mysql_data:
   postgres_data:
+  mongodb_data:
 
 networks:
   common:

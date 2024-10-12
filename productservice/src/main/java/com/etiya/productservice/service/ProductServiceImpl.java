@@ -4,12 +4,21 @@ import com.etiya.productservice.dto.request.CreateProductRequestDto;
 import com.etiya.productservice.dto.request.DeleteProductRequestDto;
 import com.etiya.productservice.dto.request.UpdateProductRequestDto;
 import com.etiya.productservice.dto.response.CreateProductResponseDto;
+import com.etiya.productservice.dto.response.DeleteProductResponseDto;
 import com.etiya.productservice.dto.response.ListProductResponseDto;
 import com.etiya.productservice.dto.response.UpdateProductResponseDto;
+import com.etiya.productservice.entity.Product;
+import com.etiya.productservice.repository.ProductRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@RequiredArgsConstructor
 public class ProductServiceImpl implements ProductService {
+    private final ProductRepository productRepository;
+
     //TODO: MapStruct
     @Override
     public List<ListProductResponseDto> getAll() {
@@ -17,7 +26,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public DeleteProductRequestDto delete(DeleteProductRequestDto deleteProductRequestDto) {
+    public DeleteProductResponseDto delete(DeleteProductRequestDto deleteProductRequestDto) {
         return null;
     }
 
@@ -29,5 +38,10 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public UpdateProductResponseDto update(UpdateProductRequestDto updateProductRequestDto) {
         return null;
+    }
+
+    @Override
+    public List<Product> search(List<Integer> ids) {
+        return productRepository.findByIdIn(ids);
     }
 }

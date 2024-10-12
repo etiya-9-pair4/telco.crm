@@ -13,14 +13,14 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.UUID;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdateProductRequestDto {
     @NotNull
-    private UUID id;
+    private Integer id;
 
     private String name;
 

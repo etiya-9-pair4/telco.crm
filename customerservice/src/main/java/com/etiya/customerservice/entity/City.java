@@ -11,7 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "cities")
+@Table(name = "Cities")
 public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,4 +19,6 @@ public class City {
     private int id;
     @Column(name = "name")
     private String name;
+
+    // private List<District> districs;
 }

@@ -11,14 +11,14 @@ import lombok.Setter;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.UUID;
+
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdateProductResponseDto {
-    private UUID id;
+    private Integer id;
     private String name;
     private BigDecimal price;
     private Integer stock;

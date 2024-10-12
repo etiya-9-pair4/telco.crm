@@ -8,12 +8,21 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
 @AllArgsConstructor
+//@NoArgsConstructor TODO: why we didn't use noargs?
 @Entity
-@Table(name = "customers")
+@Table(name = "Customers")
 @Inheritance(strategy = InheritanceType.JOINED)
+//TODO: add relations
 public class Customer extends BaseEntity {
+//    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL) //cascade olacak mı?
+//    private List<Address> addresses;
+
+    //private Contac contact;
+    //TODO: rename!
+
 }

@@ -1,25 +1,21 @@
 package com.etiya.customerservice.entity;
 
+import com.etiya.customerservice.core.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "contacts")
-public class Contact {
+@Table(name = "Contacts")
+//TODO: rename!
+public class Contact extends BaseEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private int id;
     @Column(name = "email")
     private String email;
     @Column(name = "mobile_phone")
@@ -28,11 +24,8 @@ public class Contact {
     private String homePhone;
     @Column(name = "fax_number")
     private String faxNumber;
-    @Column(name = "created_date")
-    private LocalDateTime createdDate;
-    @Column(name = "updated_date")
-    private LocalDateTime updatedDate;
-    @Column(name = "deleted_date")
-    private LocalDateTime deletedDate;
+
+    //private List<Customer> customers;
+
 
 }

@@ -22,23 +22,23 @@ public abstract class ProductMapper {
 
     public abstract CreateProductResponseDto productToCreateResponseDto(Product product);
 
-    @Mapping(target = "name", source = "name", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    @Mapping(target = "price", source = "price", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    @Mapping(target = "stock", source = "stock", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    @Mapping(target = "catalog", source = "catalog", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    @Mapping(target = "campaignProducts", source = "campaignProducts", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    @Mapping(target = "productCharacteristicValues", source = "productCharacteristicValues", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    public abstract Product productFromUpdateDto(UpdateProductRequestDto updateProductRequestDto);
-
-    public abstract UpdateProductResponseDto productToUpdateResponseDto(Product product);
-
-    public abstract Product productFromDeleteDto(DeleteProductRequestDto deleteProductRequestDto);
-
-    public abstract DeleteProductResponseDto productToDeleteResponseDto(Product product);
-
-
-    public abstract ListProductResponseDto productListToListProductResponseDto(Product product);
-
-    public abstract List<ListProductResponseDto> productsToResponseDtoList(List<Product> products);
+//    @Mapping(target = "name", source = "name", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+//    @Mapping(target = "price", source = "price", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+//    @Mapping(target = "stock", source = "stock", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+//    @Mapping(target = "catalog", source = "catalog", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+//    @Mapping(target = "campaignProducts", source = "campaignProducts", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+  //  @Mapping(target = "productCharacteristicValues", source = "productCharacteristicValues", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+//    public abstract Product productFromUpdateDto(UpdateProductRequestDto updateProductRequestDto);
+//
+//    public abstract UpdateProductResponseDto productToUpdateResponseDto(Product product);
+//
+//    public abstract Product productFromDeleteDto(DeleteProductRequestDto deleteProductRequestDto);
+//
+//    public abstract DeleteProductResponseDto productToDeleteResponseDto(Product product);
+//
+//
+//    public abstract ListProductResponseDto productListToListProductResponseDto(Product product);
+//
+//    public abstract List<ListProductResponseDto> productsToResponseDtoList(List<Product> products);
 
 }

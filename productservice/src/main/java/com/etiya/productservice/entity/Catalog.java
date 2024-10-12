@@ -5,24 +5,24 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
-import java.util.UUID;
+
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "catalog")
+@Table(name = "Catalogs")
 public class Catalog extends BaseEntity {
 
     @Column(name = "parent_id")
-    private UUID parentId;
+    private Integer parentId;
 
-    @OneToMany(mappedBy = "catalog")
-    private List<Product> products;
-
-    @OneToMany(mappedBy = "catalog")
-    private List<CatalogProductOffer> catalogProductOffers;
+//    @OneToMany(mappedBy = "catalog")
+//    private List<Product> products;
+//
+//    @OneToMany(mappedBy = "catalog")
+//    private List<CatalogProductOffer> catalogProductOffers;
 
 //    @PrePersist
 //    @PreUpdate

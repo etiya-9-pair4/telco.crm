@@ -20,12 +20,12 @@ public class Product extends BaseEntity {
     @Column(name = "stock")
     private Integer stock;
 
-    @ManyToOne
-    @JoinColumn(name = "product_id")
-    private Catalog catalog;
+//    @ManyToOne
+//    @JoinColumn(name = "product_id")
+//    private Catalog catalog;
 
-    @OneToMany(mappedBy = "product")
-    private List<CampaignProduct> campaignProducts;
+//    @OneToMany(mappedBy = "product")
+//    private List<CampaignProduct> campaignProducts;
 //    @OneToMany(mappedBy = "product")
 //    private List<ProductCharacteristicValue> productCharacteristicValues;
 }

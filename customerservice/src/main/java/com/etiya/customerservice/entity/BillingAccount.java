@@ -1,5 +1,6 @@
 package com.etiya.customerservice.entity;
 
+import com.etiya.customerservice.core.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,13 +15,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "BillingAccounts")
-public class BillingAccount {
+@Table(name = "Billing_Accounts")
+//TODO: add a CustomerAccount?
+public class BillingAccount extends BaseEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private int id;
+
     @Column(name = "status")
     private boolean status;
     @Column(name = "account_number")
@@ -30,11 +29,8 @@ public class BillingAccount {
     //TODO: enum?
     @Column(name = "type")
     private String type;
-    @Column(name = "created_date")
-    private LocalDateTime createdDate;
-    @Column(name = "updated_date")
-    private LocalDateTime updatedDate;
-    @Column(name = "deleted_date")
-    private LocalDateTime deletedDate;
+
+//    private Customer customer;
+//    private Address adress;
 
 }

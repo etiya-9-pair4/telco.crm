@@ -11,9 +11,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "corporate_customer")
+@Table(name = "Corporate_Customers")
 @PrimaryKeyJoinColumn(name = "id")
-public class CorporateCustomer extends Customer{
+public class CorporateCustomer extends Customer {
 
     @Column(name = "corporate_name")
     private String corporateName;

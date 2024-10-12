@@ -1,6 +1,7 @@
 package com.etiya.customerservice.entity;
 
 
+import com.etiya.customerservice.core.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,17 +10,15 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "address")
-public class Address {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private int id;
+@Table(name = "Addresses")
+public class Address extends BaseEntity {
+
     @Column(name = "street")
     private String street;
     @Column(name = "house_number")
@@ -28,10 +27,9 @@ public class Address {
     private String description;
     @Column(name = "is_default")
     private boolean isDefault;
-    @Column(name = "created_date")
-    private LocalDateTime createdDate;
-    @Column(name = "updated_date")
-    private LocalDateTime updatedDate;
-    @Column(name = "deleted_date")
-    private LocalDateTime deletedDate;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 }
+

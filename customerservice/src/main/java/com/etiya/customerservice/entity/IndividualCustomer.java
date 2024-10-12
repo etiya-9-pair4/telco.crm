@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "individual_customer")
+@Table(name = "Individual_Customers")
 @PrimaryKeyJoinColumn(name = "id")
 public class IndividualCustomer extends Customer {
     @Column(name = "NAT_id")
@@ -27,13 +27,12 @@ public class IndividualCustomer extends Customer {
     private String middleName;
     @Column(name = "last_name")
     private String lastName;
-    //TODO: enum?
-    @Column(name = "gender")
-    private byte gender;
     @Column(name = "date_of_birth")
     private LocalDateTime dateOfBirth;
     @Column(name = "mother_name")
     private String motherName;
     @Column(name = "father_name")
     private String fatherName;
+
+//    private Gender gender;
 }

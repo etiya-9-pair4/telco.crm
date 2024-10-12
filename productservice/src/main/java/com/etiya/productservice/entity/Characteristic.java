@@ -14,10 +14,10 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="Charecteristic")
+@Table(name="Charecteristics")
 public class Characteristic extends BaseEntity {
     @Column(name="description")
     private String description;
-    @OneToMany(mappedBy = "characteristic")
-    private List<ProductCharacteristicValue> productCharacteristicValues;
+//    @OneToMany(mappedBy = "characteristic")
+//    private List<ProductCharacteristicValue> productCharacteristicValues;
 }

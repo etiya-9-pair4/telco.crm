@@ -28,8 +28,8 @@ public class ProductOffer extends BaseEntity {
     @Column(name="discount_rate")
     private short discountRate;
 
-    @OneToMany(mappedBy = "productOffer")
-    private List<CatalogProductOffer> catalogProductOffers;
-    @OneToMany(mappedBy = "productOffer")
-    private List<CustomerProductOffer> customerProductOffers;
+//    @OneToMany(mappedBy = "productOffer")
+//    private List<CatalogProductOffer> catalogProductOffers;
+//    @OneToMany(mappedBy = "productOffer")
+//    private List<CustomerProductOffer> customerProductOffers;
 }

@@ -24,7 +24,7 @@ public class Campaign extends BaseEntity {
     private String campaignCode;
     @Column(name="discount_rate")
     private short discountRate;
-
-    @OneToMany(mappedBy = "campaign")
-    private List<CampaignProduct> campaignProducts;
+//
+//    @OneToMany(mappedBy = "campaign")
+//    private List<CampaignProduct> campaignProducts;
 }

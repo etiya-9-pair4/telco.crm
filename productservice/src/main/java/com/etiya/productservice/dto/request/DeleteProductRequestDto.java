@@ -13,11 +13,11 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.UuidGenerator;
+
 
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.UUID;
+
 
 @Getter
 @Setter
@@ -26,5 +26,5 @@ import java.util.UUID;
 public class DeleteProductRequestDto {
     @NotBlank
     @NotNull
-    private UUID id;
+    private Integer id;
 }
