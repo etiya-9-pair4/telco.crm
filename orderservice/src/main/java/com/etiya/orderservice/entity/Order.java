@@ -15,10 +15,10 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "Orders")
+@Document(collection = "orders")
 public class Order {
     @Id
-    private Integer id;
+    private String id;
     private LocalDate createdDate;
     private float totalPrice;
     private List<ProductDto> products;
