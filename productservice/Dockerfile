@@ -1,4 +1,4 @@
-FROM maven:3.9.9-sapmachine-23 as build
+FROM maven:3.9.9-openjdk-22 as build
 WORKDIR /app
 COPY . /app/
 RUN mvn clean package -DskipTests

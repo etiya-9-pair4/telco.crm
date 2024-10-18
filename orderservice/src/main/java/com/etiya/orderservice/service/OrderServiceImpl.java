@@ -6,6 +6,7 @@ import com.etiya.orderservice.dto.request.CreateOrderRequestDto;
 import com.etiya.orderservice.entity.Order;
 import com.etiya.orderservice.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -16,6 +17,7 @@ import java.util.List;
 public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
     private final ProductServiceClient productServiceClient;
+    private final KafkaTemplate<String,Object> kafkaTemplate;
 
     @Override
     public List<Order> getAll() {
@@ -43,6 +45,8 @@ public class OrderServiceImpl implements OrderService {
         order.setCustomerId(createOrderRequestDto.getCustomerId());
         order.setProducts(response);
         orderRepository.save(order);
+
+        kafkaTemplate.send("orderTopic",new Object());
 
     }
 }

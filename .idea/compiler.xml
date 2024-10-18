@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eureka" />
-        <module name="core (1) (io.github.macidko)" />
         <module name="configserver" />
         <module name="identityservice" />
         <module name="gateway" />
@@ -30,6 +29,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="core" target="19" />
+      <module name="core (1) (io.github.macidko)" target="19" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
