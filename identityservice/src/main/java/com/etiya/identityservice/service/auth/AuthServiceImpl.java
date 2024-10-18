@@ -6,7 +6,7 @@ import com.etiya.identityservice.dto.auth.response.LoginResponseDto;
 import com.etiya.identityservice.dto.auth.response.RegisterResponseDto;
 import com.etiya.identityservice.entity.User;
 import com.etiya.identityservice.service.user.UserService;
-import io.github.halitkalayci.security.BaseJwtService;
+import io.github.macidko.security.BaseJwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;

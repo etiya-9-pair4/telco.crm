@@ -22,6 +22,7 @@
       <set>
         <option value="$PROJECT_DIR$/../core/pom.xml" />
         <option value="$PROJECT_DIR$/../etiya-9-microservices/core/pom.xml" />
+        <option value="$PROJECT_DIR$/core/pom.xml" />
       </set>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
