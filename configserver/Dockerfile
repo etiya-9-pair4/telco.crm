@@ -3,5 +3,5 @@ WORKDIR /app
 COPY . /app/
 RUN mvn clean package -DskipTests
 FROM openjdk:23-jdk
-COPY --from=build /app/target/configserver-0.0.1-SNAPSHOT.jar /app/configserver.jar
+COPY --from=build /app/target/configserver-0.0.1.jar /app/configserver.jar
 CMD ["java", "-jar", "/app/configserver.jar"]

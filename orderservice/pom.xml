@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.etiya</groupId>
     <artifactId>orderservice</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>OrderService</name>
     <description>OrderService</description>
     <url/>
@@ -76,6 +76,12 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
             <version>3.2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.etiya</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
     <dependencyManagement>

@@ -27,7 +27,7 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: test
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - productservice_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     networks:
@@ -59,7 +59,7 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: test
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - identityservice_data:/var/lib/postgresql/data
     ports:
       - "5433:5432"
     networks:
@@ -85,6 +85,8 @@ services:
     depends_on:
       - customerservice_db
       - productservice_db
+      - identityservice_db
+      - orderservice_db
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:8001/actuator/health" ]
       interval: 5s
@@ -120,7 +122,7 @@ services:
     networks:
       - common
     environment:
-      - EUREKA_URL = http://eureka:8888
+      - EUREKA_URL=http://eureka:8888
       - EUREKA_INSTANCE_HOSTNAME=gateway
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8888/eureka/
       - SPRING_CLOUD_CONFIG_URI=http://configserver:8001
@@ -164,6 +166,23 @@ services:
       eureka:
         condition: service_healthy
 
+  orderservice:
+    container_name: orderservice
+    image: "telcocrm-orderservice"
+    ports:
+      - "8082:8082"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8888/eureka/
+      - EUREKA_INSTANCE_HOSTNAME=orderservice
+      - SPRING_CLOUD_CONFIG_URI=http://configserver:8001
+      - SPRING_CLOUD_CONFIG_PROFILE=prod
+      - SPRING_CLOUD_CONFIG_LABEL=main
+    networks:
+      - common
+    depends_on:
+      eureka:
+        condition: service_healthy
+
   identityservice:
     container_name: identityservice
     image: "telcocrm-identityservice"
@@ -188,6 +207,9 @@ services:
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - common
+
 
   kafka:
     image: confluentinc/cp-kafka:7.4.1
@@ -204,10 +226,13 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_LOG_RETENTION_HOURS: 168
+    networks:
+      - common
 
 volumes:
   mysql_data:
-  postgres_data:
+  productservice_data:
+  identityservice_data:
   mongodb_data:
 
 networks:

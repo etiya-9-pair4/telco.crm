@@ -1,5 +1,6 @@
 package com.etiya.orderservice.service;
 
+import com.etiya.event.OrderCreatedEvent;
 import com.etiya.orderservice.client.ProductServiceClient;
 import com.etiya.orderservice.dto.product.ProductDto;
 import com.etiya.orderservice.dto.request.CreateOrderRequestDto;
@@ -17,7 +18,7 @@ import java.util.List;
 public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
     private final ProductServiceClient productServiceClient;
-    private final KafkaTemplate<String,Object> kafkaTemplate;
+    private final KafkaTemplate<String, Object> kafkaTemplate;
 
     @Override
     public List<Order> getAll() {
@@ -46,7 +47,7 @@ public class OrderServiceImpl implements OrderService {
         order.setProducts(response);
         orderRepository.save(order);
 
-        kafkaTemplate.send("orderTopic",new Object());
+        kafkaTemplate.send("orderTopic", new OrderCreatedEvent(order.getId()));
 
     }
 }
