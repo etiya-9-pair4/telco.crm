@@ -9,6 +9,7 @@ import com.etiya.customerservice.dto.response.ListCustomerResponseDto;
 import com.etiya.customerservice.dto.response.UpdateCustomerResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -20,16 +21,19 @@ public class CustomerServiceImpl implements CustomerService {
         return null;
     }
 
+    @Transactional
     @Override
     public DeleteCustomerResponseDto delete(DeleteCustomerRequestDto deleteCustomerRequestDto) {
         return null;
     }
 
+    @Transactional
     @Override
     public CreateCustomerResponseDto add(CreateCustomerRequestDto createCustomerRequestDto) {
         return null;
     }
 
+    @Transactional
     @Override
     public UpdateCustomerResponseDto update(UpdateCustomerRequestDto updateCustomerRequestDto) {
         return null;

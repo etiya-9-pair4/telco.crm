@@ -18,8 +18,6 @@ import lombok.Setter;
 public class Gender extends BaseEntity {
     @Column(name = "name")
     private String name;
-    @Column(length = 3, name = "code")
-    private String code;
 
-    // private List<IndividualCustomer> individualCustomer;
+    //IndCus relations?
 }

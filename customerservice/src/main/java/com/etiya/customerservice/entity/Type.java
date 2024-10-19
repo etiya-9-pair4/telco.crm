@@ -15,7 +15,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name = "Account_Types")
-public class AccountType extends BaseEntity {
+public class Type extends BaseEntity {
     @Column(name = "name")
     private String name;
 }

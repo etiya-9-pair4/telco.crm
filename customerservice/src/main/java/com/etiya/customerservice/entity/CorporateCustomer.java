@@ -1,10 +1,9 @@
 package com.etiya.customerservice.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -12,7 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name = "Corporate_Customers")
-@PrimaryKeyJoinColumn(name = "id")
 public class CorporateCustomer extends Customer {
 
     @Column(name = "corporate_name")

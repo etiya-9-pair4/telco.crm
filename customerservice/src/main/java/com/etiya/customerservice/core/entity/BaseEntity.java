@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @MappedSuperclass
 //TODO: id should be auto incremented
 public abstract class BaseEntity {
@@ -23,4 +24,20 @@ public abstract class BaseEntity {
     private LocalDateTime updatedDate;
     @Column(name = "deleted_date")
     private LocalDateTime deletedDate;
+
+    @PrePersist
+    protected void onCreate() {
+        createdDate = LocalDateTime.now();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        updatedDate = LocalDateTime.now();
+    }
+
+    @PreRemove
+    protected void onDelete() {
+        deletedDate = LocalDateTime.now();
+    }
+
 }

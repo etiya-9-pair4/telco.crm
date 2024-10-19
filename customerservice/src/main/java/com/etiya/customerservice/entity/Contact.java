@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -25,7 +27,9 @@ public class Contact extends BaseEntity {
     @Column(name = "fax_number")
     private String faxNumber;
 
-    //private List<Customer> customers;
+    @ManyToOne
+    @JoinColumn(name = "customer_id",nullable = false)
+    private Customer customer;
 
 
 }

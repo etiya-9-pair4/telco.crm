@@ -29,7 +29,11 @@ public class Address extends BaseEntity {
     private boolean isDefault;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id")
+    @JoinColumn(name = "district_id", nullable = false)
+    private District district;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 }
 

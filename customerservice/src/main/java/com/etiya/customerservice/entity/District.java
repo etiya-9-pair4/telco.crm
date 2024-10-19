@@ -22,5 +22,10 @@ public class District {
     @Column(name = "name")
     private String name;
 
-   // private City city;
+    @ManyToOne
+    @JoinColumn(name = "city_id", nullable = false)
+    private City city;
+
+    @OneToMany(mappedBy = "district")
+    private List<Address> addresses;
 }

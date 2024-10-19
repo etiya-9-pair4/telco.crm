@@ -7,8 +7,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-
 
 @Getter
 @Setter
@@ -16,8 +14,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @Table(name = "Billing_Accounts")
-//TODO: add a CustomerAccount?
-public class BillingAccount extends BaseEntity {
+public class CustomerAccount extends BaseEntity {
 
 
     @Column(name = "status")

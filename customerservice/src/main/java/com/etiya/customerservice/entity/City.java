@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -20,5 +22,6 @@ public class City {
     @Column(name = "name")
     private String name;
 
-    // private List<District> districs;
+    @OneToMany(mappedBy = "city")
+    private List<District> districs;
 }
