@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"io.github.macidko"},{"l":"io.github.macidko.security"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"io.github.macidko"},{"l":"io.github.macidko.annotations"},{"l":"io.github.macidko.configuration"},{"l":"io.github.macidko.exception"},{"l":"io.github.macidko.exception.response"},{"l":"io.github.macidko.exception.type"},{"l":"io.github.macidko.security"}];updateSearchResults();

@@ -1,2 +1,7 @@
 io.github.macidko
+io.github.macidko.annotations
+io.github.macidko.configuration
+io.github.macidko.exception
+io.github.macidko.exception.response
+io.github.macidko.exception.type
 io.github.macidko.security

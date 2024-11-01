@@ -1,3 +1,8 @@
-C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core\src\main\java\io\github\macidko\App.java
-C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core\src\main\java\io\github\macidko\security\BaseJwtService.java
-C:\Users\eren.macit\IdeaProjects\telco-crm\telco.crm\core\src\main\java\io\github\macidko\security\BaseSecurityConfiguration.java
+C:\Users\anil.aygun\Downloads\telco.crm\core\src\main\java\io\github\macidko\annotations\EnableCore.java
+C:\Users\anil.aygun\Downloads\telco.crm\core\src\main\java\io\github\macidko\App.java
+C:\Users\anil.aygun\Downloads\telco.crm\core\src\main\java\io\github\macidko\configuration\SecurityConfiguration.java
+C:\Users\anil.aygun\Downloads\telco.crm\core\src\main\java\io\github\macidko\exception\GlobalExceptionHandler.java
+C:\Users\anil.aygun\Downloads\telco.crm\core\src\main\java\io\github\macidko\exception\response\BusinessExceptionResponse.java
+C:\Users\anil.aygun\Downloads\telco.crm\core\src\main\java\io\github\macidko\exception\type\BusinessException.java
+C:\Users\anil.aygun\Downloads\telco.crm\core\src\main\java\io\github\macidko\security\BaseJwtService.java
+C:\Users\anil.aygun\Downloads\telco.crm\core\src\main\java\io\github\macidko\security\BaseSecurityConfiguration.java
